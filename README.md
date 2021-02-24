@@ -39,8 +39,8 @@ Data dictionary
 `animals`
 |Column|Type|Description|
 |-|-|-|
-|animal_name|int|name of the animal|
-|hair|str|whether they have hair|
+|animal_name|str|name of the animal|
+|hair|int|whether they have hair|
 |feathers|int|whether they have feather|
 |eggs|int|whether they give birth of eggs|
 |milk|int|whether they milk babies|
