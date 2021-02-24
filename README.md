@@ -58,7 +58,11 @@ Data dictionary
 |catsize|int|whether their size is close to a cat|
 |class_type|int|animal class|
 
+<br />
+<br />
+
 `animal_class`
+
 |Column|Type|Description|
 |-|-|-|
 |Class_Number|int|animal class|
@@ -66,13 +70,21 @@ Data dictionary
 |Class_Type|str|class of the animals|
 |Animal_Names|str|name of the animal|
 
+<br />
+<br />
+
 `animals` contains animals and its features. I used these features to train mutlinomial `LogisticRegression`. `animal_calss` contains actual categories for each animal.
+
+<br />
 
 I added unique features for platypus, which are `cloaca`, `webbed`, `beak`.
 
 * `cloaca` - Organ which defecates eggs, urine and feces. This is usually found among fish, birds, reptiles, amphibians
 * `webbed` - Webbed feet. Mostly found among birds, reptiles and amphibians
 * `beak` - The one all birds have
+
+<br />
+<br />
 
 I made 2 `DataFrame`. I used these to determine whether a platypus is mammal. I separated platypus by gender because only male platypus has poison on its claws. Venomous mammal is not common so that this might have significant effect.
 
@@ -82,7 +94,9 @@ I made 2 `DataFrame`. I used these to determine whether a platypus is mammal. I 
 ### Result
 
 Model
-```lr = LogisticRegression(multi_class='multinomial', solver='newton-cg')```
+
+```LogisticRegression(multi_class='multinomial', solver='newton-cg')```
+
 This model make predictions between 1 and 7, and you can get the animal class from below table.
 
 |Class_Number|Class_Type|
@@ -95,7 +109,10 @@ This model make predictions between 1 and 7, and you can get the animal class fr
 |6|Bug|
 |7|Invertebrate|
 
-My predicts at 96% accuracy with unseen data. I assume this is trustworthy.
+<br />
+<br />
+
+This model predicts at 96% accuracy with unseen data. I assume this is trustworthy.
 
 
 
